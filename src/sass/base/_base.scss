@@ -48,10 +48,21 @@ ul {
 }
 
 .block_title {
-	color: #fff;
-    font-size: 3.5em;
+	display: block;
+	float: left;
+	width: 100%;
+	background-color: #FFF;
+	color: #333;
+    font-size: 32px;
 	text-align: center;
-	margin-top: 15px;	
+	padding: 15px 0 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+	span {
+		padding: 5px;
+		border-bottom: 5px solid #8F8F8F;
+	}	
 }
 
 .p0  {

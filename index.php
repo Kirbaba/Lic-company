@@ -67,6 +67,99 @@
 	<!-- close .contain -->
 </section>
 <!-- close .initial-screen -->
+
+<!-- open .prodiucts -->
+<section class="products">
+	<!-- open .block-title -->
+	<h2 class="block_title"><span>ПРОДУКЦИЯ</span></h2>
+	<!-- close .block-title -->
+	<!-- open .contain -->
+	<div class="contain">
+		<!-- open .products__box -->
+		<div class="products__box">
+			<!-- open .products__item -->
+			<div class="products__item">
+				<!-- open .products__item--img -->
+				<div class="products__item--img">
+					<img src="<?php bloginfo('template_directory'); ?>/img/product1.png" alt="" />
+				</div>
+				<!-- close .products__item--img -->
+				<!-- open .products__item--desc -->
+				<div class="products__item--desc">
+					<p>Грязь,<br /> минеральная лечебрая, иловая сульфидная</p>
+					<a href="#">подробнее</a>
+				</div>
+				<!-- close .products__item--desc -->
+			</div>
+			<!-- close .products__item -->
+			<!-- open .products__item -->
+			<div class="products__item">
+				<!-- open .products__item--img -->
+				<div class="products__item--img">
+					<img src="<?php bloginfo('template_directory'); ?>/img/product2.png" alt="" />
+				</div>
+				<!-- close .products__item--img -->
+				<!-- open .products__item--desc -->
+				<div class="products__item--desc">
+					<p>Грязевые препараты и бальнеокосметика  </p>
+					<a href="#">подробнее</a>
+				</div>
+				<!-- close .products__item--desc -->
+			</div>
+			<!-- close .products__item -->
+			<!-- open .products__item -->
+			<div class="products__item">
+				<!-- open .products__item--img -->
+				<div class="products__item--img">
+					<img src="<?php bloginfo('template_directory'); ?>/img/product3.png" alt="" />
+				</div>
+				<!-- close .products__item--img -->
+				<!-- open .products__item--desc -->
+				<div class="products__item--desc">
+					<p>Соль морская</p>
+					<a href="#">подробнее</a>
+				</div>
+				<!-- close .products__item--desc -->
+			</div>
+			<!-- close .products__item -->
+			<!-- open .products__item -->
+			<div class="products__item">
+				<!-- open .products__item--img -->
+				<div class="products__item--img">
+					<img src="<?php bloginfo('template_directory'); ?>/img/product4.png" alt="" />
+				</div>
+				<!-- close .products__item--img -->
+				<!-- open .products__item--desc -->
+				<div class="products__item--desc">
+					<p>Водоросли </p>
+					<a href="#">подробнее</a>
+				</div>
+				<!-- close .products__item--desc -->
+			</div>
+			<!-- close .products__item -->
+			<!-- open .products__item -->
+			<div class="products__item">
+				<!-- open .products__item--img -->
+				<div class="products__item--img">
+					<img src="<?php bloginfo('template_directory'); ?>/img/product5.png" alt="" />
+				</div>
+				<!-- close .products__item--img -->
+				<!-- open .products__item--desc -->
+				<div class="products__item--desc">
+					<p>Литература</p>
+					<a href="#">подробнее</a>
+				</div>
+				<!-- close .products__item--desc -->
+			</div>
+			<!-- close .products__item -->
+		</div>
+		<!-- close .products__box -->
+	</div>
+	<!-- close .contain -->
+	
+	
+</section>
+<!-- close .prodiucts -->
     
 <?php wp_footer(); ?>
 </body>

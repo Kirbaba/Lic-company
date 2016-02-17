@@ -10,11 +10,11 @@
        background-clip: $clip;
 }
 
-@mixin box-shadow($top, $left, $blur, $color) {
-      -webkit-box-shadow:$top $left $blur $color;
-      -moz-box-shadow:$top $left $blur $color;
-      box-shadow:$top $left $blur $color;
-    }
+// @mixin box-shadow($top, $left, $blur, $color) {
+//       -webkit-box-shadow:$top $left $blur $color;
+//       -moz-box-shadow:$top $left $blur $color;
+//       box-shadow:$top $left $blur $color;
+//     }
 	
 
 @mixin transition($t) {
