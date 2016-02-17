@@ -156,10 +156,64 @@
 		<!-- close .products__box -->
 	</div>
 	<!-- close .contain -->
-	
-	
 </section>
 <!-- close .prodiucts -->
+
+<!-- open .advantages -->
+<section class="advantages">
+	<!-- open .contain -->
+	<div class="contain">
+		<!-- open .advantages__item -->
+		<div class="advantages__item">
+			<img src="<?php bloginfo('template_directory'); ?>/img/adv1.png" alt="" />
+			<p>Без химикатов</p>
+		</div>
+		<!-- close .advantages__item -->
+		<!-- open .advantages__item -->
+		<div class="advantages__item">
+			<img src="<?php bloginfo('template_directory'); ?>/img/adv2.png" alt="" />
+			<p>На основе натуральных ингредиентов</p>
+		</div>
+		<!-- close .advantages__item -->
+		<!-- open .advantages__item -->
+		<div class="advantages__item">
+			<img src="<?php bloginfo('template_directory'); ?>/img/adv3.png" alt="" />
+			<p>Долговременный эффект</p>
+		</div>
+		<!-- close .advantages__item -->
+	</div>
+	<!-- close .contain -->
+</section>
+<!-- close .advantages -->
+
+<!-- open .reviews -->
+<section class="reviews">
+	<!-- open .contain -->
+	<div class="contain">
+		<!-- open .block-title -->
+		<h2 class="block_title"><span>ОТЗЫВЫ КЛИЕНТОВ</span></h2>
+		<!-- close .block-title -->
+		<div class="owl_wrapper">
+		  <div class="prev no_select"><</div>
+		  <div class="owl_content">
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
+		  </div>
+		  <div class="next no_select">></div>
+		</div>
+	</div>
+	<!-- close .contain -->
+</section>
+<!-- close .reviews -->
     
 <?php wp_footer(); ?>
 </body>

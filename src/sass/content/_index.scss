@@ -48,7 +48,7 @@
 	float: left;
 	position: relative;
 	width: 100%;
-	@include background-image(linear-gradient(top, #333 -25%, rgba(255,255,255,0) 125%));
+	@include background(linear-gradient(top, #333 -25%, rgba(255,255,255,0) 125%));
 	&__box {
 		width: 100%;
 		padding: 25px 0;
@@ -118,4 +118,33 @@
 			}
 		}
 	}
+}
+
+.advantages {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 50px 0;
+	text-align: center;
+	&__item {
+		display: inline-block;
+		width: 200px;
+		margin: 0 40px;
+		vertical-align: top;
+		img {
+			margin: 10px 0;
+		}
+		p {
+			font-weight: 300;
+			font-size: 16px;
+		}
+	}
+}
+
+.reviews {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
 }
