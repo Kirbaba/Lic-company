@@ -206,6 +206,7 @@
 					font-size: 16px;
 					font-weight: 300;
 					color: #000;
+					text-align: left;
 				}
 			}		
 		}
@@ -226,5 +227,23 @@
 			background-color: darken(#333,10%);
 			color: #ccc;
 		}
+	}
+}
+
+.video-reviews {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	@include background-image(linear-gradient(top, #333 -25%, #fff 125%));
+	text-align: center;
+	padding-bottom: 40px;
+	&__carousel {
+		display: block;
+		float: left;
+		position: relative;	
+		overflow: hidden;
+		width: 100%;
+		padding: 35px 0;	
 	}
 }

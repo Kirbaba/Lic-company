@@ -272,6 +272,46 @@
 	<!-- close .contain -->
 </section>
 <!-- close .reviews -->
+
+<!-- open .video-reviews -->
+<section class="video-reviews">
+<!-- open .block-title -->
+	<h2 class="block_title"><span>ВИДЕО - ОТЗЫВЫ</span></h2>
+	<!-- close .block-title -->
+	<!-- open .contain -->
+	<div class="contain">
+		<!-- open .video-reviews__carousel -->
+		<div class="video-reviews__carousel">
+			<div class="swiper-wrapper">
+				<!-- open .swiper-slide -->
+				<div class="swiper-slide">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1nQMKXWBQfA" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/KRIbf3CS7cw" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/l9OAZWKg_gA" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/UxFrVke1yzo" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="swiper-slide">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/CNw0EgVKZro" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<!-- close .swiper-slide -->
+				
+			</div>
+			<!-- close .video-reviews__carousel -->
+			<!-- Add Navigation -->
+		        <div class="swiper-button-prev-sec"></div>
+		        <div class="swiper-button-next-sec"></div>
+		</div>
+		<a href="#" class="reviews--more">перейти в каталог</a>
+	</div>
+	<!-- close .contain -->
+</section>
+<!-- close .video-reviews -->
     
 <?php wp_footer(); ?>
 </body>

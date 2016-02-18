@@ -54,6 +54,9 @@ $(function() {
     });
 });
 $( document ).ready(function() {
+
+    var swiper_arr = [];
+
    var swiper = new Swiper('.reviews__carousel', {
         grabCursor: true,
         centeredSlides: true,
@@ -63,6 +66,19 @@ $( document ).ready(function() {
         spaceBetween: 20,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+         slidesPerView: 'auto',
+         loop: true
+    });
+
+   var swiper_new = new Swiper('.video-reviews__carousel', {
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 1,
+        initialSlide: 0,
+        roundLengths: true,
+        spaceBetween: 20,
+        nextButton: '.swiper-button-next-sec',
+        prevButton: '.swiper-button-prev-sec',
          slidesPerView: 'auto',
          loop: true
     });
