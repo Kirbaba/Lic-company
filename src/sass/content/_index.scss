@@ -247,3 +247,76 @@
 		padding: 35px 0;	
 	}
 }
+
+.about {
+	display: block;
+	float: left;	
+	position: relative;
+	width: 100%;
+	padding: 50px 0;
+	h2 {
+		@extend .block_title;
+		color: $base-color;
+		margin-bottom: 35px;
+	}
+	p {
+		font-size: 13px;
+		font-weight: 300;
+		color: #666;
+		text-indent: 2.5em;
+	}
+	&__form {
+		display: block;
+		position: relative;
+		width: 85%;
+		text-align: center;
+		margin: 40px auto 0;
+		background-color: #C8DAC8;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 10px 20px;
+		h3 {
+			display: inline-block;
+			margin: 0;
+			font-weight: 300;
+			color: #000;
+			font-size: 19px;
+			text-transform: uppercase;
+		}
+		&--inp {
+			display: inline-block;
+			margin: 0 10px;
+			border: none;
+			outline-style: none;
+			font-size: 15px;
+			color: #000;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 10px;
+			height: 30px;
+			line-height: 30px;
+			background-color: #F2F6F2;
+			font-weight: 300;
+			width: 380px;
+		}
+		&--btn {
+			display: inline-block;
+			color: #fff;
+			text-transform: lowercase;
+			padding: 5px 35px;
+			font-size: 14px;
+			@include border-radius(6px);
+			@include background-clip(padding-box);
+			background-color: #659965;
+			@include box-shadow(0 2px 5px rgba(0,0,0,.22));
+			position: relative;
+			@include transition(.3s);
+			&:hover, &:active {
+				background-color: darken(#659965,10%);
+				color: #fff;
+			}
+		}
+	}
+}
