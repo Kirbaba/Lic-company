@@ -85,3 +85,49 @@
         ;
     }
 }
+
+.documents {
+    .slick-prev, .slick-next {     
+        width: 16px;
+        height: 25px;
+        background-size: inherit;  
+        &:hover {
+            background-color: rgba(102,102,102,.82);
+        }
+        &:before {
+            content: "";
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .slick-prev {
+        &:before {
+            background-image: url('../img/arrows.png');
+            background-position: 0px 0px;
+        }
+    }
+  .slick-next {
+    &:before {
+      background-image: url('../img/arrows.png');
+      background-position: -38px 0px;
+    }
+  }
+}
+
+.contacts {
+    &--phone-icon {
+        background-image: url('../img/Phone_1-1.png');
+    }
+    &--watch-icon {
+        background-image: url('../img/Watch.png');
+    }
+    &--mail-icon {
+        background-image: url('../img/Mail_1-2.png');
+    }
+    &--point-icon {
+        background-image: url('../img/Pointer_1.png');
+    }
+}

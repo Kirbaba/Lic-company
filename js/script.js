@@ -1,35 +1,3 @@
-
-/*-------------GOOGLE MAPS-----------------*/
-
-/*function initialize() {
-
-    var myLatlng = new google.maps.LatLng(59.934602, 30.334607);
-    var mapOptions = {
-        center: new google.maps.LatLng(59.934602, 30.334607),
-        zoom: 17,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: false
-    };
-    var map = new google.maps.Map(document.getElementById("map_canvas"),
-        mapOptions);
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title:"Ditlogistic"
-    });
-}
-
-function loadScript() {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyAaOWKyamSxMTXclSDFmJ2N4Am20PCTD6I&sensor=FALSE&callback=initialize";
-    document.body.appendChild(script);
-}
-
-window.onload = loadScript;
-*/
-
-
 $(function() {
 
     $(window).scroll(function() {
@@ -82,5 +50,52 @@ $( document ).ready(function() {
          slidesPerView: 'auto',
          loop: true
     });
+
+   jQuery(function ($) {
+
+        jQuery('.documents__carousel').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            arrows: true,        
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
+
+    });
+
+
+
 });
+
+ymaps.ready(init);
+        
+function init() {
+    var myMap = new ymaps.Map('map', {
+            center: [55.818245, 37.718307],
+            zoom: 16,
+            controls: [],
+            
+        })  ,
+        myPlacemark = new ymaps.Placemark([55.818245, 37.723071], {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: img.url + 'Pointer_2.png',
+            // Размеры метки.
+            iconImageSize: [37, 45],
+            iconImageOffset: [-17, -55]
+
+            
+        });
+    
+
+    
+    myMap.behaviors.disable('scrollZoom');
+    myMap.geoObjects.add(myPlacemark);
+}
 
