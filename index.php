@@ -188,29 +188,87 @@
 
 <!-- open .reviews -->
 <section class="reviews">
+	<!-- open .block-title -->
+	<h2 class="block_title"><span>ОТЗЫВЫ КЛИЕНТОВ</span></h2>
+	<!-- close .block-title -->
 	<!-- open .contain -->
 	<div class="contain">
-		<!-- open .block-title -->
-		<h2 class="block_title"><span>ОТЗЫВЫ КЛИЕНТОВ</span></h2>
-		<!-- close .block-title -->
-		<div class="owl_wrapper">
-		  <div class="prev no_select"><</div>
-		  <div class="owl_content">
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		    <img src="http://lorempicsum.com/futurama/350/200/1" alt="" />
-		  </div>
-		  <div class="next no_select">></div>
+		
+			<div class="reviews__carousel">				
+					  <!-- Swiper -->
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide reviews__carousel--item">
+						<!-- open .reviews__carousel--item--user -->
+		            	<div class="reviews__carousel--item--user">
+		            		<!-- open .reviews__carousel--item--img -->
+		            		<div class="reviews__carousel--item--img">
+		            			<img src="https://scontent-waw1-1.cdninstagram.com/t51.2885-15/s320x320/e35/12628139_167489006962192_1115668651_n.jpg?ig_cache_key=MTE3ODQ4OTQ2MDg0NTI5NDgxOA%3D%3D.2" alt="" /></div>
+		            		<!-- close .reviews__carousel--item--img -->
+		            		<p>Ольга</p>
+		            	</div>
+		            	<!-- close .reviews__carousel--item--user -->
+		            	<!-- open .reviews__carousel--item--text -->
+		            	<div class="reviews__carousel--item--text">
+		            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, delectus.</p>
+		            	</div>
+		            	<!-- close .reviews__carousel--item--text -->
+		            </div>
+		            <div class="swiper-slide reviews__carousel--item">
+		            	<!-- open .reviews__carousel--item--user -->
+		            	<div class="reviews__carousel--item--user">
+		            		<!-- open .reviews__carousel--item--img -->
+		            		<div class="reviews__carousel--item--img">
+		            			<img src="https://scontent-waw1-1.cdninstagram.com/t51.2885-15/e35/12677350_1660186237566403_1317928266_n.jpg?ig_cache_key=MTE4NTg2MjY0OTM0NDExNDY3Mw%3D%3D.2" alt="" /></div>
+		            		<!-- close .reviews__carousel--item--img -->
+		            		<p>Ольга</p>
+		            	</div>
+		            	<!-- close .reviews__carousel--item--user -->
+		            	<!-- open .reviews__carousel--item--text -->
+		            	<div class="reviews__carousel--item--text">
+		            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, delectus.</p>
+		            	</div>
+		            	<!-- close .reviews__carousel--item--text -->
+		            </div>
+		            <div class="swiper-slide reviews__carousel--item">
+						<!-- open .reviews__carousel--item--user -->
+		            	<div class="reviews__carousel--item--user">
+		            		<!-- open .reviews__carousel--item--img -->
+		            		<div class="reviews__carousel--item--img">
+		            			<img src="https://scontent-waw1-1.cdninstagram.com/t51.2885-15/e35/12558445_1215093648504212_2000352951_n.jpg?ig_cache_key=MTE3OTA2ODk1MTMxMDU4MDc4Mg%3D%3D.2" alt="" /></div>
+		            		<!-- close .reviews__carousel--item--img -->
+		            		<p>Ольга</p>
+		            	</div>
+		            	<!-- close .reviews__carousel--item--user -->
+		            	<!-- open .reviews__carousel--item--text -->
+		            	<div class="reviews__carousel--item--text">
+		            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, delectus.</p>
+		            	</div>
+		            	<!-- close .reviews__carousel--item--text -->
+		            </div>
+		            <div class="swiper-slide reviews__carousel--item">
+						<!-- open .reviews__carousel--item--user -->
+		            	<div class="reviews__carousel--item--user">
+		            		<!-- open .reviews__carousel--item--img -->
+		            		<div class="reviews__carousel--item--img">
+		            			<img src="https://scontent-waw1-1.cdninstagram.com/t51.2885-15/e35/12523778_1694768290767302_1359581520_n.jpg?ig_cache_key=MTE3MTcxNjA0NTY4Mjk4MjE2NQ%3D%3D.2" alt="" /></div>
+		            		<!-- close .reviews__carousel--item--img -->
+		            		<p>Ольга</p>
+		            	</div>
+		            	<!-- close .reviews__carousel--item--user -->
+		            	<!-- open .reviews__carousel--item--text -->
+		            	<div class="reviews__carousel--item--text">
+		            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, delectus.</p>
+		            	</div>
+		            	<!-- close .reviews__carousel--item--text -->
+		            </div>
+		        </div>
+	        <!-- Add Navigation -->
+	        <div class="swiper-button-prev"></div>
+	        <div class="swiper-button-next"></div>
 		</div>
+		<a href="#" class="reviews--more">получить консультацию</a>
 	</div>
+
 	<!-- close .contain -->
 </section>
 <!-- close .reviews -->

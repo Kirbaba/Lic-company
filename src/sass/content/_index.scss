@@ -147,4 +147,84 @@
 	float: left;
 	position: relative;
 	width: 100%;
+	@include background-image(linear-gradient(top, #333 -25%, #fff 125%));
+	text-align: center;
+	padding-bottom: 40px;
+	&__carousel { 
+		width: 100%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		overflow: hidden;
+	    margin: 0;
+	    position: relative;
+		&--item {
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+		    padding: 20px;
+			&--user {
+				display: block;
+				float: left;
+				width: 25%;
+				position: relative;
+				text-align: center;
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
+				padding: 0 10px;
+				p {
+					font-size: 15px;
+					font-weight: 300;
+					color: #000;
+				}
+			}			
+			&--img {
+				display: block;
+				margin: 0 auto;
+				width: 88px;
+				height: 88px;
+				@include border-radius(7px);
+				@include background-clip(padding-box);
+				background-color: rgba(255, 255, 255, .79);
+				margin-bottom: 5px;
+				@include overflow-img;
+				img {
+					max-width: 200%;
+				}
+			}
+			&--text {
+				display: block;
+				float: left;
+				position: relative;
+				width: 75%;
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
+				padding: 0 10px;
+				p {
+					font-style: italic;
+					font-size: 16px;
+					font-weight: 300;
+					color: #000;
+				}
+			}		
+		}
+	}
+	&--more {
+		display: inline-block;
+		@include border-radius(7px);
+		@include background-clip(padding-box);
+		background-color: #333;
+		@include box-shadow(0 2px 5px rgba(0,0,0,.41));
+		padding: 12px 50px;
+		text-transform: lowercase;
+		font-size: 15px;
+		color: #CCC;
+		position: relative;
+		@include transition(.3s);
+		&:hover, &:focus {
+			background-color: darken(#333,10%);
+			color: #ccc;
+		}
+	}
 }

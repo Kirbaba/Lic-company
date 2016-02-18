@@ -1,54 +1,54 @@
-.owl_wrapper{
-  width: 100%;
-  overflow: hidden;
+ .swiper-container {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
-.owl_content{padding-left: 12%;}
-.owl_wrapper .owl-item{
-  opacity: 0;
-  transform: scale(0.6);
-  -ms-transform: scale(0.6);
-  transition: all .2s;
-  -webkit-transform: all .2s;
-  z-index: 1;
-}
-.owl_wrapper .active{opacity: 1;}
-.owl_wrapper .active.middle_beside{
-  transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  opacity: 0.8;
-  margin: 0 -1%;
-  z-index: 2;
-}
-.owl_wrapper .active.middle{
-  transform: scale(1);
-  -ms-transform: scale(1);
-  opacity: 1;
-  z-index: 3;
-}
-.owl_wrapper .active.next_to_mid{margin-left: -1%;}
-.owl_wrapper .active.prev_to_mid{margin-right: -1%;}
 
+.swiper-slide {
+    width: 592px;
+    height: 144px;
+    @include border-radius(6px);
+    @include background-clip(padding-box);
+    background-color: rgba(255, 255, 255, .6);
 
-
-/*===== Navigation =====*/
-.owl_wrapper .prev, .owl_wrapper .next{
-  position: absolute;
-  top: 100px; left: 100px;
-  width: 30px;
-  border-radius: 100%;
-  text-align: center;
-  line-height: 30px;
-  color: #fff;
-  background: #777;
-  cursor: pointer;
-  z-index: 5;
 }
-.owl_wrapper .next{left: calc(100% - 100px);}
-.no_select{
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+
+.swiper-slide.swiper-slide-prev,
+.swiper-slide.swiper-slide-next {
+    background-color: rgba(0,0,0,0);
+    .reviews__carousel--item--text {
+       display: none; 
+    }
+}
+
+.swiper-slide.swiper-slide-prev .reviews__carousel--item--user {
+    float: right;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-image: url('../img/arrows.png');
+    width: 16px;
+    height: 25px;
+    background-size: inherit;
+    top: 55%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.swiper-button-prev {
+    background-position: 0px 0px;
+    left: 50px;
+    &:hover, &:focus {
+        background-position: -18px 0px;
+    }
+}
+.swiper-button-next {
+    background-position: -38px 0px;
+    right: 50px;
+    &:hover, &:focus {
+        background-position: -56px 0px;
+    }
 }
