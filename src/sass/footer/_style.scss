@@ -1,0 +1,27 @@
+.footer {
+	@extend .header;
+	padding: 10px 0;
+	height: auto;
+	&--links {
+		display: block;
+		float: left;
+		line-height: normal;
+		position: relative;
+		margin-right: 50px;
+		a {
+			display: block;
+			width: 100%;
+			font-size: 15px;
+			color: #999;
+			&:hover, &:focus {
+				color: #999;
+				text-decoration: underline;
+			}
+		}
+		p {
+			margin-top: 40px;
+			font-size: 15px;
+			color: #999;
+		}
+	}
+}

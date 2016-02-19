@@ -19,23 +19,27 @@ gulp.task('styles', function() {
 });
 
 gulp.task ('min-image', function(cb) {
-   gulp.src(['img/*.png','img/*.jpg','img/*.gif','img/*.jpeg']).pipe(imageop({
-        use: [pngquant()]
+   gulp.src(['img/*.png','img/*.jpg','img/*.gif','img/*.jpeg'])
+   .pipe(imageop({
+        optimizationLevel: 7,
+        progressive: true,
+        interlaced: true
     }))
    .pipe(gulp.dest('./img')).on('end', cb).on('error', cb);
 });
 
 gulp.task('compress', function() {
-  return gulp.src('src/*.js')
+  return gulp.src('src/js/script.js')
     .pipe(uglify())
-    .pipe(gulp.dest('js'));
+    .pipe(rename('script.min.js'))
+    .pipe(gulp.dest('./js/'));
+    
 });
 
 //Watch task
-gulp.task('default',function() {    
-	gulp.watch("./js/*.js", function(event){
+gulp.task('default',function() {   	
 		gulp.run('compress');
-	});
+    //gulp.run('min-image');
 });
 
 gulp.task('watch', function() {
