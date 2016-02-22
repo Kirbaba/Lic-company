@@ -167,14 +167,16 @@
 	float: left;
 	position: relative;
 	width: 100%;
-	min-height: 90%;
 	background-image: url('../img/bg-page.jpg');
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
 	        background-size: cover;
 	background-position: 50% 50%;
-	padding: 60px 0;
+	padding: 40px 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .single-page{
 	&--half {
@@ -182,10 +184,40 @@
 		float: left;
 		position: relative;
 		width: 50%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 0 30px;
+		h2 {
+			@extend .block_title;
+			background: none;
+			color: #FFF;
+			font-size: 26px;
+			span {
+				padding: 5px 25px;
+				border-bottom: 5px solid rgba(255,255,255,.5);
+			}
+		}
 	}
-	h2 {
-		@extend .block_title;
-		color: #FFF;
-		font-size: 26px;
+	&--text {
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 15px 30px;
+		margin-top: 20px;
+		color: #000;
+		min-height: 155px;
+		@include border-radius(7px);
+		@include background-clip(padding-box);
+		background-color: rgba(204,204,204,.82);
+		p {
+			line-height: 16px;
+			margin-bottom: 15px;
+			font-size: 12px;
+		}
 	}
 }

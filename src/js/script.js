@@ -22,7 +22,10 @@ $(function() {
     });
 });
 $( document ).ready(function() {
-
+    $( window ).resize(function() {
+        page_height();
+    }
+    page_height();
     var swiper_arr = [];
 
    var swiper = new Swiper('.reviews__carousel', {
@@ -85,7 +88,7 @@ function init() {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: img.url + 'Pointer_2.png',
+            iconImageHref: myajax.url + 'Pointer_2.png',
             // Размеры метки.
             iconImageSize: [37, 45],
             iconImageOffset: [-17, -55]
@@ -97,4 +100,17 @@ function init() {
     
     myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
+}
+
+function page_height(){
+    var win_h = $(window).height();
+    var head_h = $('.header').height();
+    var foot_h = $('.footer').height();
+    var nav_h = $('.navigation').height();
+    $('.single-page__wrap').height(win_h - head_h - foot_h - nav_h - 80 - 50)
+    console.log(win_h);
+    console.log(head_h);
+    console.log(foot_h);
+    console.log(nav_h );
+    console.log(win_h - head_h - foot_h - nav_h);
 }
