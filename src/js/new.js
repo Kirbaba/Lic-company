@@ -14,3 +14,7 @@ $(document).ready(function(){
         return false;
     });
 });
+
+$(function(){
+    alert('123-123--it still work');
+});

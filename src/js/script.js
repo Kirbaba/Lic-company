@@ -98,4 +98,6 @@ function init() {
     myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
 }
-
+$(function(){
+    alert('123-two-towo-hooo');
+});

@@ -46,12 +46,13 @@ gulp.task('default',function() {
 });
 
 gulp.task('watch', function() {
+  gulp.run('compress');
 	gulp.watch('src/sass/**/*.scss', function(){
 		gulp.run('minify-css');
 		gulp.run('styles');
 	});
-    gulp.watch('src/js/*.js', function(){
-		gulp.run('compress');
+  gulp.watch('src/js/*.js', function(){
+		  gulp.run('compress');
 	});
 
 });
