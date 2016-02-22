@@ -339,7 +339,7 @@
 			<!-- open .writetous__box--right -->
 			<div class="writetous__box--right">
 				<textarea name="writetous__box--text" id="writetous__box--text" class="writetous__box--text" placeholder="Введите комментарий"></textarea>
-				<a href="#" class="writetous__box--btn">отправить</a>
+				<a href="#" id="sendQuestion" class="writetous__box--btn">отправить</a>
 			</div>
 			<!-- close .writetous__box--right -->
 		</div>
@@ -359,8 +359,8 @@
 		<div id="map" style="width:100%; height:100%"></div>
 		<!-- open .contacts__info -->
 		<div class="contacts__info">
-			<p><i class="contacts--phone-icon"></i>8(495) 734-50-03</p>
-			<p><i class="contacts--mail-icon"></i>7345003@mail.ru</p>
+			<p><i class="contacts--phone-icon"></i><?= get_theme_mod('phone_textbox') ?></p>
+			<p><i class="contacts--mail-icon"></i><?= get_theme_mod('mail_textbox') ?></p>
 			<p><i class="contacts--point-icon"></i>107150, г.Москва, ул. Ивантеевская, д.9</p>
 			<p><i class="contacts--watch-icon"></i>с пн. - пт., с 10 до 17 часов, без обеда</p>
 		</div>

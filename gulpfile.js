@@ -29,9 +29,12 @@ gulp.task ('min-image', function(cb) {
 });
 
 gulp.task('compress', function() {
-  return gulp.src('src/js/script.js')
+  return gulp.src('src/js/*.js')
     .pipe(uglify())
-    .pipe(rename('script.min.js'))
+    .pipe(rename({
+        suffix: ".min",
+        extname: ".js"
+    }))
     .pipe(gulp.dest('./js/'));
     
 });
@@ -47,4 +50,8 @@ gulp.task('watch', function() {
 		gulp.run('minify-css');
 		gulp.run('styles');
 	});
+    gulp.watch('src/js/*.js', function(){
+		gulp.run('compress');
+	});
+
 });

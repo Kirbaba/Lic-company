@@ -25,9 +25,9 @@
 			<a href="#" class="header__info--basket">Корзина<br/>Сумма: 0 р </a>
 			<!-- open .header__info--contacts -->
 			<div class="header__info--contacts">
-				<p class="phone-number">Звоните:<br>8 (495) 734-50-03</p>
+				<p class="phone-number">Звоните:<br><?= get_theme_mod('phone_textbox') ?></p>
 				<a href="#" class="header__info--contacts--phoneme">Заказать звонок</a>
-				<p>7345003@mail.ru</p>
+				<p><?= get_theme_mod('mail_textbox') ?></p>
 			</div>
 			<!-- close .header__info--contacts -->
 		</div>
