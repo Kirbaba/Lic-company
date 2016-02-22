@@ -13,10 +13,11 @@
 	        background-size: cover;
 	h1 {
 		display: block;
-		color: $base-color;
+		color: rgba(102,153,102,.8);
 		font-size: 28px;
 		text-transform: uppercase;
 		margin: 0;
+		font-weight: 600;
 		span {
 			background-color: rgba(51, 51, 51, .85);
 			padding: 10px;
@@ -104,13 +105,14 @@
 				color: #FFF;	
 				@include transition(.3s);
 				line-height: normal;
+				font-weight: 400;
 				&:hover, &:focus {
 					background-color: darken(#659965,10%);
 				}
 			}
 			p {				
 				font-size: 20px;
-				font-weight: 300;
+				font-weight: 400;
 				color: #000;
 				display: inline-block;
 				line-height: normal;
@@ -136,7 +138,7 @@
 			margin: 10px 0;
 		}
 		p {
-			font-weight: 300;
+			font-weight: 400;
 			font-size: 16px;
 		}
 	}
@@ -147,7 +149,12 @@
 	float: left;
 	position: relative;
 	width: 100%;
-	@include background-image(linear-gradient(top, #333 -25%, #fff 125%));
+	background-image: url('../img/gradient-bg.png');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: 50% 0;
 	text-align: center;
 	padding-bottom: 40px;
 	&__carousel { 
@@ -174,7 +181,7 @@
 				padding: 0 10px;
 				p {
 					font-size: 15px;
-					font-weight: 300;
+					font-weight: 400;
 					color: #000;
 				}
 			}			
@@ -204,7 +211,7 @@
 				p {
 					font-style: italic;
 					font-size: 16px;
-					font-weight: 300;
+					font-weight: 400;
 					color: #000;
 					text-align: left;
 				}
@@ -217,10 +224,12 @@
 		@include background-clip(padding-box);
 		background-color: #333;
 		@include box-shadow(0 2px 5px rgba(0,0,0,.41));
-		padding: 12px 50px;
+		padding: 6px 50px;
 		text-transform: lowercase;
 		font-size: 15px;
 		color: #CCC;
+		font-weight: 500;
+		width: 292px;
 		position: relative;
 		@include transition(.3s);
 		&:hover, &:focus {
@@ -235,7 +244,12 @@
 	float: left;
 	position: relative;
 	width: 100%;
-	@include background-image(linear-gradient(top, #333 -25%, #fff 125%));
+	background-image: url('../img/gradient-bg.png');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: 50% 0;
 	text-align: center;
 	padding-bottom: 40px;
 	&__carousel {
@@ -245,6 +259,9 @@
 		overflow: hidden;
 		width: 100%;
 		padding: 35px 0;	
+	}
+	h2 {
+		padding-top: 60px;
 	}
 }
 
@@ -257,11 +274,14 @@
 	h2 {
 		@extend .block_title;
 		color: $base-color;
-		margin-bottom: 35px;
+		padding-bottom: 35px;
+		span {
+			border-bottom: 5px solid rgba(102, 153, 102, .36);
+		}
 	}
 	p {
 		font-size: 13px;
-		font-weight: 300;
+		font-weight: 400;
 		color: #666;
 		text-indent: 2.5em;
 	}
@@ -298,7 +318,7 @@
 			height: 30px;
 			line-height: 30px;
 			background-color: #F2F6F2;
-			font-weight: 300;
+			font-weight: 400;
 			width: 380px;
 		}
 		&--btn {
@@ -335,6 +355,10 @@
 	margin-bottom: 50px;
 	h2 {
 		border-bottom: 3px solid #C3C3C3;
+		span {
+			border-bottom: 5px solid rgba(102, 153, 102, .36);
+		}
+		padding-top: 50px;
 	}
 	&__carousel {
 		display: block;
@@ -356,12 +380,18 @@
 	position: relative;
 	width: 100%;	
 	margin-bottom: 50px;
+	margin-top: 50px;
 	background-image: url('../img/bg3.png');
 		background-repeat: no-repeat;
 		-webkit-background-size: cover;
 		     -o-background-size: cover;
 		        background-size: cover;
 		background-position: 50% 50%;
+		h2 {
+			span {
+				border-bottom: 5px solid rgba(102, 153, 102, .36);
+			}
+		}
 	&__box {
 		display: block;
 		float: left;
@@ -376,7 +406,7 @@
 		:-moz-placeholder           {color: #000;font-style: italic;}/* Firefox 18- */
 		:-ms-input-placeholder      {color: #000;font-style: italic;}	
 		color: #000;
-		font-weight: 300;
+		font-weight: 400;
 		&--left {
 			display: block;
 			float: left;
@@ -450,6 +480,7 @@
 	float: left;
 	position: relative;
 	width: 100%;
+	margin-top: 50px;
 	&__map {
 		display: block;
 		float: left;
@@ -476,6 +507,7 @@
 		p {
 			font-size: 16px;
 			color: #000;
+			font-weight: 500;
 		}
 		i {
 			display: inline-block;

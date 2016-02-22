@@ -68,6 +68,7 @@
 				background-image: url('../img/Mail_1.png');
 				background-repeat: no-repeat;
 				@include transition(.3s);
+			    background-position: 0 50%;
 				&:hover,&:focus {
 					color: #696;
 				}
