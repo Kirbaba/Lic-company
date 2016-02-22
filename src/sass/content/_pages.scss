@@ -161,3 +161,31 @@
 	}
 	
 }
+
+.single-page__wrap {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	min-height: 90%;
+	background-image: url('../img/bg-page.jpg');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: 50% 50%;
+	padding: 60px 0;
+}
+.single-page{
+	&--half {
+		display: block;
+		float: left;
+		position: relative;
+		width: 50%;
+	}
+	h2 {
+		@extend .block_title;
+		color: #FFF;
+		font-size: 26px;
+	}
+}
