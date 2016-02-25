@@ -107,7 +107,7 @@ function page_height(){
     var head_h = $('.header').height();
     var foot_h = $('.footer').height();
     var nav_h = $('.navigation').height();
-    $('.single-page__wrap').height(win_h - head_h - foot_h - nav_h - 80 - 50)
+    $('.single-page__wrap, .page-box').height(win_h - head_h - foot_h - nav_h - 80 - 50)
     console.log(win_h);
     console.log(head_h);
     console.log(foot_h);
