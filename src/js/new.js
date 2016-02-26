@@ -6,7 +6,7 @@ $(document).ready(function(){
         $.ajax({
             url: myajax.act, //url, к которому обращаемся
             type: "POST",
-            data: "action=sendQ&name=" + name, //данные, которые передаем. Обязательно для action указываем имя нашего хука
+            data: "action=sendQ&name=" + name + "&email=" + email + "&text=" + text,
             success: function (data) {
                 console.log(data);
             }

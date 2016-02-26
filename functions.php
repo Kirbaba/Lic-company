@@ -3,6 +3,7 @@
 define('TM_DIR', get_template_directory(__FILE__));
 define('TM_URL', get_template_directory_uri(__FILE__));
 
+use lib\helpers\Mailer;
 use lib\helpers\WP;
 
 
@@ -100,7 +101,11 @@ add_action('wp_ajax_sendQ', 'sendQ');
 add_action('wp_ajax_nopriv_sendQ', 'sendQ');
 
 function sendQ(){
-    echo $_POST['name'];
+    $tpl = new Tpl();
+    $mail = new Mailer();
+    $mail->to = $_POST['email'];
+    $mail->subject = "Ответ с сайта";
+    $mail->message = $tpl->send_q_msg($_POST['name'], $_POST['text']);
     wp_die();
 }
 
