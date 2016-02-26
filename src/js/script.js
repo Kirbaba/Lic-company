@@ -24,7 +24,7 @@ $(function() {
 $( document ).ready(function() {
     $( window ).resize(function() {
         page_height();
-    }
+    });
     page_height();
     var swiper_arr = [];
 
@@ -67,8 +67,6 @@ $( document ).ready(function() {
 
     });
 
-
-
 });
 
 ymaps.ready(init);
@@ -107,10 +105,5 @@ function page_height(){
     var head_h = $('.header').height();
     var foot_h = $('.footer').height();
     var nav_h = $('.navigation').height();
-    $('.single-page__wrap, .page-box').height(win_h - head_h - foot_h - nav_h - 80 - 50)
-    console.log(win_h);
-    console.log(head_h);
-    console.log(foot_h);
-    console.log(nav_h );
-    console.log(win_h - head_h - foot_h - nav_h);
-}
+    $('.single-page__wrap, .page-box').css("min-height" , win_h - head_h - foot_h - nav_h - 50 + "px");
+};
