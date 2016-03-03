@@ -642,3 +642,52 @@ a.goods__item--tobasket--single {
 		}
 	}
 }
+
+.enter {
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 50px 0;
+	::-webkit-input-placeholder {color: #333;font-style: 16px;font-weight: 400;}
+	::-moz-placeholder          {color: #333;font-style: 16px;font-weight: 400;}/* Firefox 19+ */
+	:-moz-placeholder           {color: #333;font-style: 16px;font-weight: 400;}/* Firefox 18- */
+	:-ms-input-placeholder      {color: #333;font-style: 16px;font-weight: 400;}	
+	text-align: center;
+	&--inp {
+		display: block;
+		margin: 10px auto 15px;
+		width: 330px;
+		height: 30px;
+		@include border-radius(10px);
+		@include background-clip(padding-box);
+		background-color: rgba(102,102,102,.15);
+		border: none;
+		outline: none;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 0 40px;
+		color: #000;
+	}
+	&--but {
+		display: inline-block;
+		position: relative;
+		font-size: 17px;
+		color: #fff;
+		font-family: $os;
+		font-weight: 400;
+		text-transform: lowercase;
+		margin: 15px 0;
+		padding: 5px 50px;
+		@include border-radius(10px);
+		@include background-clip(padding-box);
+		background-color: #659965;
+		@include box-shadow(0 3px 7px rgba(0,0,0,.22));
+		@include transition(.3s);
+		&:hover, &:focus {
+			background-color: darken(#659965, 10%);
+			color: #fff;
+		}
+	}
+}
