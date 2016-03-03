@@ -699,3 +699,6 @@ a.goods__item--tobasket--single {
 		text-align: center;
 	}
 }
+.order {
+	@extend .enter;
+}
