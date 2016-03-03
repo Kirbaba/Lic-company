@@ -16,7 +16,7 @@
 	<div class="contain">
 		<!-- open .header__logo -->
 		<div class="header__logo">
-			<a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="" /></a>
+			<a href="/"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="" /></a>
 		</div>
 		<!-- close .header__logo -->
 		<!-- open .header__info -->
@@ -41,16 +41,24 @@
 <!-- open .navigation -->
 <nav class="navigation">
 	<!-- open .contain -->
-	<div class="contain">
+	<?php
+	wp_nav_menu( array(
+		'theme_location' => 'primary',
+		'menu_class' => '',
+		'container' => 'div',
+		'container_class' => 'contain',
+	));
+	?>
+	<!--<div class="contain">
 		<ul>
-			<li><a href="#">Главная</a></li>
-			<li><a href="#">Продукция</a></li>
+			<li><a href="/">Главная</a></li>
+			<li><a href="/prod/">Продукция</a></li>
 			<li><a href="#">Статьи</a></li>
-			<li><a href="#">Доставка и оплата</a></li>
-			<li><a href="#">Вопросы и ответы </a></li>
+			<li><a href="/delivery/">Доставка и оплата</a></li>
+			<li><a href="/questions/">Вопросы и ответы </a></li>
 			<li><a href="#">Контакты</a></li>
 		</ul>
-	</div>
+	</div>-->
 	<!-- close .contain -->	
 </nav>
 <!-- close .navigation -->

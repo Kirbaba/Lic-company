@@ -13,4 +13,17 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    $('#askQuestion').on('click', function(){
+        var ask = $(this).prev().val();
+        $.ajax({
+            url: myajax.act, //url, к которому обращаемся
+            type: "POST",
+            data: "action=askQ&ask=" + ask,
+            success: function (data) {
+                location.reload();
+            }
+        });
+        return false;
+    });
 });

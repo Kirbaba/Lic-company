@@ -3,6 +3,7 @@
 define('TM_DIR', get_template_directory(__FILE__));
 define('TM_URL', get_template_directory_uri(__FILE__));
 
+use lib\helpers\Debug;
 use lib\helpers\Mailer;
 use lib\helpers\WP;
 
@@ -102,10 +103,7 @@ add_action('wp_ajax_nopriv_sendQ', 'sendQ');
 
 function sendQ(){
     $tpl = new Tpl();
-    $mail = new Mailer();
-    $mail->to = $_POST['email'];
-    $mail->subject = "Ответ с сайта";
-    $mail->message = $tpl->send_q_msg($_POST['name'], $_POST['text']);
+    $tpl->send_mails_q($_POST['name'], $_POST['text'], $_POST['email']);
     wp_die();
 }
 
@@ -152,4 +150,365 @@ add_action('customize_register', function($customizer) {
 /*--------------------------------------------— КОНЕЦ НАСТРОЕК ТЕМЫ —-----------------------------------------------*/
 
 
+/*----------------------------------------------— REVIEWS —---------------------------------------------------------*/
 
+add_action('init', 'myCustomInitReviews');
+
+function myCustomInitReviews()
+{
+    $labels = array(
+        'name' => 'Отзывы', // Основное название типа записи
+        'singular_name' => 'Отзывы', // отдельное название записи типа Book
+        'add_new' => 'Добавить отзыв',
+        'add_new_item' => 'Добавить новый отзыв',
+        'edit_item' => 'Редактировать отзыв',
+        'new_item' => 'Новый отзыв',
+        'view_item' => 'Посмотреть отзыв',
+        'search_items' => 'Найти отзыв',
+        'not_found' => 'Отзывов не найдено',
+        'not_found_in_trash' => 'В корзине отзывов не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Отзывы'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor','thumbnail')
+    );
+    register_post_type('reviews', $args);
+}
+
+
+
+function reviewShortcode()
+{
+    $args = array(
+        'post_type' => 'reviews',
+        'post_status' => 'publish',
+        'posts_per_page' => -1
+    );
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $tpl = new Tpl();
+    return $tpl->reviews($my_query);
+
+}
+
+add_shortcode('reviews', 'reviewShortcode');
+
+/*---------------------------------------------— END REVIEWS —------------------------------------------------------*/
+
+/*----------------------------------------------— VIDEO REVIEWS —---------------------------------------------------------*/
+
+add_action('init', 'myCustomInitVideoReviews');
+
+function myCustomInitVideoReviews()
+{
+    $labels = array(
+        'name' => 'Видео отзывы', // Основное название типа записи
+        'singular_name' => 'Видео отзывы', // отдельное название записи типа Book
+        'add_new' => 'Добавить видео отзыв',
+        'add_new_item' => 'Добавить видео новый отзыв',
+        'edit_item' => 'Редактировать видео отзыв',
+        'new_item' => 'Новый видео отзыв',
+        'view_item' => 'Посмотреть видео отзыв',
+        'search_items' => 'Найти видео отзыв',
+        'not_found' => 'Отзывов не найдено',
+        'not_found_in_trash' => 'В корзине отзывов не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Видео отзывы'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title')
+    );
+    register_post_type('video-reviews', $args);
+}
+
+
+function videoReviewShortcode()
+{
+    $args = array(
+        'post_type' => 'video-reviews',
+        'post_status' => 'publish',
+        'posts_per_page' => -1
+    );
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $tpl = new Tpl();
+    return $tpl->video_reviews($my_query);
+
+}
+
+add_shortcode('video-reviews', 'videoReviewShortcode');
+
+/*---------------------------------------------— END VIDEO REVIEWS —------------------------------------------------------*/
+
+
+/*---------------------------------------------— Товары —------------------------------------------------------*/
+
+add_action('init', 'myCustomInitProduct');
+
+function myCustomInitProduct()
+{
+    $labels = array(
+        'name' => 'Продукция', // Основное название типа записи
+        'singular_name' => 'Продукт', // отдельное название записи типа Book
+        'add_new' => 'Добавить продукт',
+        'add_new_item' => 'Добавить новый продукт',
+        'edit_item' => 'Редактировать продукт',
+        'new_item' => 'Новый продукт',
+        'view_item' => 'Посмотреть продукт',
+        'search_items' => 'Найти продукт',
+        'not_found' => 'Продуктов не найдено',
+        'not_found_in_trash' => 'В корзине продуктов не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Продукция'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'thumbnail', 'editor')
+    );
+    register_post_type('product', $args);
+}
+
+
+add_action('save_post', 'myExtraFieldsUpdate', 10, 1);
+
+/* Сохраняем данные, при сохранении поста */
+function myExtraFieldsUpdate($post_id)
+{
+    if (!isset($_POST['extra'])) return false;
+    foreach ($_POST['extra'] as $key => $value) {
+        if (empty($value)) {
+            delete_post_meta($post_id, $key); // удаляем поле если значение пустое
+            continue;
+        }
+
+        update_post_meta($post_id, $key, $value); // add_post_meta() работает автоматически
+    }
+    return $post_id;
+}
+
+function extraFieldsProductsSubtitle($post)
+{
+    ?>
+    <p>
+        <span>Объем: </span>
+        <input type="text" name='extra[size]' value="<?php echo get_post_meta($post->ID, "size", 1); ?>">
+    </p>
+    <?php
+}
+
+function extraFieldsProductsPrice($post)
+{
+    ?>
+    <p>
+        <span>Цена: </span>
+        <input type="text" name='extra[price]' value="<?php echo get_post_meta($post->ID, "price", 1); ?>">
+    </p>
+    <?php
+}
+
+function extraFieldsProductsFormat($post)
+{
+    ?>
+    <p>
+        <span>Формат: </span>
+        <input type="text" name='extra[format]' value="<?php echo get_post_meta($post->ID, "format", 1); ?>">
+    </p>
+    <?php
+}
+
+function extraFieldsProductsContainer($post)
+{
+    ?>
+    <p>
+        <span>Тара: </span>
+        <input type="text" name='extra[container]' value="<?php echo get_post_meta($post->ID, "container", 1); ?>">
+    </p>
+    <?php
+}
+
+function myExtraFieldsProducts()
+{
+    add_meta_box('extra_price', 'Цена', 'extraFieldsProductsPrice', 'product', 'normal', 'high');
+    add_meta_box('extra_format', 'Формат', 'extraFieldsProductsFormat', 'product', 'normal', 'high');
+    add_meta_box('extra_container', 'Тара', 'extraFieldsProductsContainer', 'product', 'normal', 'high');
+    add_meta_box('extra_size', 'Объем', 'extraFieldsProductsSubtitle', 'product', 'normal', 'high');
+}
+
+add_action('add_meta_boxes', 'myExtraFieldsProducts', 1);
+
+
+function add_menu_taxonomies() {
+
+    register_taxonomy('menu', 'product', array(
+        'hierarchical' => true,
+        'labels' => array(
+            'name' => _x( 'Категории товаров', 'taxonomy general name' ),
+            'singular_name' => _x( 'Категория товаров', 'taxonomy singular name' ),
+            'search_items' => __( 'Поиск категорий' ),
+            'all_items' => __( 'Все категории' ),
+            'parent_item' => __( 'Родитель' ),
+            'parent_item_colon' => __( 'Родитель:' ),
+            'edit_item' => __( 'Редактировать категорию' ),
+            'update_item' => __( 'Обновить категорию' ),
+            'add_new_item' => __( 'Добавить новую категорию' ),
+            'new_item_name' => __( 'Новое название категории' ),
+            'menu_name' => __( 'Категории товаров' ),
+        ),
+
+// Control the slugs used for this taxonomy
+        'rewrite' => array(
+            'slug' => 'menu', // This controls the base slug that will display before each term
+            'with_front' => false, // Don't display the category base before "/locations/"
+            'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+        ),
+    ));
+}
+add_action( 'init', 'add_menu_taxonomies', 0 );
+/*---------------------------------------------— END Товары —------------------------------------------------------*/
+
+
+/*---------------------------------------------— Список категорий —------------------------------------------------------*/
+function categoryListShortcode()
+{
+    $args = array(
+        'type' => 'product',
+        'taxonomy'     => 'menu'
+    );
+
+    $categories = get_categories( $args );
+
+    $tpl = new Tpl();
+    return $tpl->get_category_list($categories);
+
+}
+
+add_shortcode('category_list', 'categoryListShortcode');
+/*---------------------------------------------— END Список категорий —------------------------------------------------------*/
+
+
+/*-------------------------------------------— МЕНЮ НАВИГАЦИИ —-----------------------------------------------------*/
+
+function theme_register_nav_menu() {
+    register_nav_menus( array(
+        'primary' => 'Меню в шапке',
+
+    ) );
+//register_nav_menu( 'primary', 'Главное меню' );
+}
+add_action( 'after_setup_theme', 'theme_register_nav_menu' );
+
+
+/*------------------------------------------— КОНЕЦ МЕНЮ НАВИГАЦИИ —------------------------------------------------*/
+
+/*----------------------------------------------— Вопросы и ответы —---------------------------------------------------------*/
+
+add_action('init', 'myCustomInitQuestions');
+
+function myCustomInitQuestions()
+{
+    $labels = array(
+        'name' => 'Вопросы и ответы', // Основное название типа записи
+        'singular_name' => 'Вопрос', // отдельное название записи типа Book
+        'add_new' => 'Добавить вопрос',
+        'add_new_item' => 'Добавить новый вопрос',
+        'edit_item' => 'Редактировать вопрос',
+        'new_item' => 'Новый вопрос',
+        'view_item' => 'Посмотреть вопрос',
+        'search_items' => 'Найти вопрос',
+        'not_found' => 'Вопрос не найдено',
+        'not_found_in_trash' => 'В корзине вопросов не найдено',
+        'parent_item_colon' => '',
+        'menu_name' => 'Вопросы'
+
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor','thumbnail')
+    );
+    register_post_type('questions', $args);
+}
+
+function questionsShortcode()
+{
+    $args = array(
+        'post_type' => 'questions',
+        'post_status' => 'publish',
+        'posts_per_page' => -1
+    );
+
+    $my_query = null;
+    $my_query = new WP_Query($args);
+
+    $tpl = new Tpl();
+    return $tpl->questions($my_query);
+
+}
+
+add_shortcode('questions', 'questionsShortcode');
+
+// AJAX ACTION
+add_action('wp_ajax_askQ', 'askQ');
+add_action('wp_ajax_nopriv_askQ', 'askQ');
+
+function askQ(){
+    $args = [
+        'post_title' => $_POST['ask'],
+        'post_type' => 'questions',
+        'post_content' => 'Ожидает ответа',
+        'post_status' => 'publish'
+    ];
+    wp_insert_post( $args );
+    wp_die();
+}
+
+/*----------------------------------------------— КОНЕЦ Вопросы и ответы —---------------------------------------------------------*/

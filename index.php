@@ -1,5 +1,4 @@
 ﻿<?php get_header(); ?>
-
 <!-- open .initial-screen -->
 <section class="initial-screen">
 	<!-- open .contain -->
@@ -12,94 +11,7 @@
 <!-- close .initial-screen -->
 
 <!-- open .prodiucts -->
-<section class="products">
-	<!-- open .block-title -->
-	<h2 class="block_title"><span>ПРОДУКЦИЯ</span></h2>
-	<!-- close .block-title -->
-	<!-- open .contain -->
-	<div class="contain">
-		<!-- open .products__box -->
-		<div class="products__box">
-			<!-- open .products__item -->
-			<div class="products__item">
-				<!-- open .products__item--img -->
-				<div class="products__item--img">
-					<img src="<?php bloginfo('template_directory'); ?>/img/product1.png" alt="" />
-				</div>
-				<!-- close .products__item--img -->
-				<!-- open .products__item--desc -->
-				<div class="products__item--desc">
-					<p>Грязь,<br /> минеральная лечебрая, иловая сульфидная</p>
-					<a href="#">подробнее</a>
-				</div>
-				<!-- close .products__item--desc -->
-			</div>
-			<!-- close .products__item -->
-			<!-- open .products__item -->
-			<div class="products__item">
-				<!-- open .products__item--img -->
-				<div class="products__item--img">
-					<img src="<?php bloginfo('template_directory'); ?>/img/product2.png" alt="" />
-				</div>
-				<!-- close .products__item--img -->
-				<!-- open .products__item--desc -->
-				<div class="products__item--desc">
-					<p>Грязевые препараты и бальнеокосметика  </p>
-					<a href="#">подробнее</a>
-				</div>
-				<!-- close .products__item--desc -->
-			</div>
-			<!-- close .products__item -->
-			<!-- open .products__item -->
-			<div class="products__item">
-				<!-- open .products__item--img -->
-				<div class="products__item--img">
-					<img src="<?php bloginfo('template_directory'); ?>/img/product3.png" alt="" />
-				</div>
-				<!-- close .products__item--img -->
-				<!-- open .products__item--desc -->
-				<div class="products__item--desc">
-					<p>Соль морская</p>
-					<a href="#">подробнее</a>
-				</div>
-				<!-- close .products__item--desc -->
-			</div>
-			<!-- close .products__item -->
-			<!-- open .products__item -->
-			<div class="products__item">
-				<!-- open .products__item--img -->
-				<div class="products__item--img">
-					<img src="<?php bloginfo('template_directory'); ?>/img/product4.png" alt="" />
-				</div>
-				<!-- close .products__item--img -->
-				<!-- open .products__item--desc -->
-				<div class="products__item--desc">
-					<p>Водоросли </p>
-					<a href="#">подробнее</a>
-				</div>
-				<!-- close .products__item--desc -->
-			</div>
-			<!-- close .products__item -->
-			<!-- open .products__item -->
-			<div class="products__item">
-				<!-- open .products__item--img -->
-				<div class="products__item--img">
-					<img src="<?php bloginfo('template_directory'); ?>/img/product5.png" alt="" />
-				</div>
-				<!-- close .products__item--img -->
-				<!-- open .products__item--desc -->
-				<div class="products__item--desc">
-					<p>Литература</p>
-					<a href="#">подробнее</a>
-				</div>
-				<!-- close .products__item--desc -->
-			</div>
-			<!-- close .products__item -->
-		</div>
-		<!-- close .products__box -->
-	</div>
-	<!-- close .contain -->
-</section>
+<?= do_shortcode('[category_list]') ?>
 <!-- close .prodiucts -->
 
 <!-- open .advantages -->
@@ -130,129 +42,11 @@
 <!-- close .advantages -->
 
 <!-- open .reviews -->
-<section class="reviews">
-	<!-- open .block-title -->
-	<h2 class="block_title"><span>ОТЗЫВЫ КЛИЕНТОВ</span></h2>
-	<!-- close .block-title -->
-	<!-- open .contain -->
-	<div class="contain">
-		
-			<div class="reviews__carousel">				
-					  <!-- Swiper -->
-		        <div class="swiper-wrapper">
-		            <div class="swiper-slide reviews__carousel--item">
-						<!-- open .reviews__carousel--item--user -->
-		            	<div class="reviews__carousel--item--user">
-		            		<!-- open .reviews__carousel--item--img -->
-		            		<div class="reviews__carousel--item--img">
-		            			<img src="https://scontent-waw1-1.cdninstagram.com/t51.2885-15/s320x320/e35/12628139_167489006962192_1115668651_n.jpg?ig_cache_key=MTE3ODQ4OTQ2MDg0NTI5NDgxOA%3D%3D.2" alt="" /></div>
-		            		<!-- close .reviews__carousel--item--img -->
-		            		<p>Ольга</p>
-		            	</div>
-		            	<!-- close .reviews__carousel--item--user -->
-		            	<!-- open .reviews__carousel--item--text -->
-		            	<div class="reviews__carousel--item--text">
-		            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, delectus.</p>
-		            	</div>
-		            	<!-- close .reviews__carousel--item--text -->
-		            </div>
-		            <div class="swiper-slide reviews__carousel--item">
-		            	<!-- open .reviews__carousel--item--user -->
-		            	<div class="reviews__carousel--item--user">
-		            		<!-- open .reviews__carousel--item--img -->
-		            		<div class="reviews__carousel--item--img">
-		            			<img src="https://scontent-waw1-1.cdninstagram.com/t51.2885-15/e35/12677350_1660186237566403_1317928266_n.jpg?ig_cache_key=MTE4NTg2MjY0OTM0NDExNDY3Mw%3D%3D.2" alt="" /></div>
-		            		<!-- close .reviews__carousel--item--img -->
-		            		<p>Ольга</p>
-		            	</div>
-		            	<!-- close .reviews__carousel--item--user -->
-		            	<!-- open .reviews__carousel--item--text -->
-		            	<div class="reviews__carousel--item--text">
-		            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, delectus.</p>
-		            	</div>
-		            	<!-- close .reviews__carousel--item--text -->
-		            </div>
-		            <div class="swiper-slide reviews__carousel--item">
-						<!-- open .reviews__carousel--item--user -->
-		            	<div class="reviews__carousel--item--user">
-		            		<!-- open .reviews__carousel--item--img -->
-		            		<div class="reviews__carousel--item--img">
-		            			<img src="https://scontent-waw1-1.cdninstagram.com/t51.2885-15/e35/12558445_1215093648504212_2000352951_n.jpg?ig_cache_key=MTE3OTA2ODk1MTMxMDU4MDc4Mg%3D%3D.2" alt="" /></div>
-		            		<!-- close .reviews__carousel--item--img -->
-		            		<p>Ольга</p>
-		            	</div>
-		            	<!-- close .reviews__carousel--item--user -->
-		            	<!-- open .reviews__carousel--item--text -->
-		            	<div class="reviews__carousel--item--text">
-		            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, delectus.</p>
-		            	</div>
-		            	<!-- close .reviews__carousel--item--text -->
-		            </div>
-		            <div class="swiper-slide reviews__carousel--item">
-						<!-- open .reviews__carousel--item--user -->
-		            	<div class="reviews__carousel--item--user">
-		            		<!-- open .reviews__carousel--item--img -->
-		            		<div class="reviews__carousel--item--img">
-		            			<img src="https://scontent-waw1-1.cdninstagram.com/t51.2885-15/e35/12523778_1694768290767302_1359581520_n.jpg?ig_cache_key=MTE3MTcxNjA0NTY4Mjk4MjE2NQ%3D%3D.2" alt="" /></div>
-		            		<!-- close .reviews__carousel--item--img -->
-		            		<p>Ольга</p>
-		            	</div>
-		            	<!-- close .reviews__carousel--item--user -->
-		            	<!-- open .reviews__carousel--item--text -->
-		            	<div class="reviews__carousel--item--text">
-		            		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, delectus.</p>
-		            	</div>
-		            	<!-- close .reviews__carousel--item--text -->
-		            </div>
-		        </div>
-	        <!-- Add Navigation -->
-	        <div class="swiper-button-prev"></div>
-	        <div class="swiper-button-next"></div>
-		</div>
-		<a href="#" class="reviews--more">получить консультацию</a>
-	</div>
-	<!-- close .contain -->
-</section>
+<?= do_shortcode('[reviews]') ?>
 <!-- close .reviews -->
 
 <!-- open .video-reviews -->
-<section class="video-reviews">
-<!-- open .block-title -->
-	<h2 class="block_title"><span>ВИДЕО - ОТЗЫВЫ</span></h2>
-	<!-- close .block-title -->
-	<!-- open .contain -->
-	<div class="contain">
-		<!-- open .video-reviews__carousel -->
-		<div class="video-reviews__carousel">
-			<div class="swiper-wrapper">
-				<!-- open .swiper-slide -->
-				<div class="swiper-slide">
-					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1nQMKXWBQfA" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div class="swiper-slide">
-					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/KRIbf3CS7cw" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div class="swiper-slide">
-					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/l9OAZWKg_gA" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div class="swiper-slide">
-					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/UxFrVke1yzo" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div class="swiper-slide">
-					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/CNw0EgVKZro" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<!-- close .swiper-slide -->
-				
-			</div>
-			<!-- close .video-reviews__carousel -->
-			<!-- Add Navigation -->
-		        <div class="swiper-button-prev-sec"></div>
-		        <div class="swiper-button-next-sec"></div>
-		</div>
-		<a href="#" class="reviews--more">перейти в каталог</a>
-	</div>
-	<!-- close .contain -->
-</section>
+<?= do_shortcode('[video-reviews]') ?>
 <!-- close .video-reviews -->
 
 <!-- open .about -->
