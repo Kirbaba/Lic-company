@@ -657,7 +657,7 @@ a.goods__item--tobasket--single {
 	&--inp {
 		display: block;
 		margin: 10px auto 15px;
-		width: 330px;
+		width: 350px;
 		height: 30px;
 		@include border-radius(10px);
 		@include background-clip(padding-box);
@@ -689,5 +689,13 @@ a.goods__item--tobasket--single {
 			background-color: darken(#659965, 10%);
 			color: #fff;
 		}
+	}
+}
+.registration {
+	@extend .enter;
+	&--but {
+		@extend .enter--but;
+		width: 350px;
+		text-align: center;
 	}
 }
