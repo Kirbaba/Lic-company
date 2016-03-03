@@ -3,6 +3,7 @@
 define('TM_DIR', get_template_directory(__FILE__));
 define('TM_URL', get_template_directory_uri(__FILE__));
 
+use lib\helpers\Cookie;
 use lib\helpers\Debug;
 use lib\helpers\Mailer;
 use lib\helpers\WP;
@@ -52,7 +53,7 @@ function add_script(){
 
 function add_admin_script(){
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', array(), '1');
-    wp_enqueue_script('admin',get_template_directory_uri() . '/js/admin.js', array(), '1');
+    wp_enqueue_script('admin',get_template_directory_uri() . '/js/admin.min.js', array(), '1');
     wp_enqueue_style( 'my-bootstrap-extension-admin', get_template_directory_uri() . '/css/bootstrap.css', array(), '1');
     wp_enqueue_script( 'my-bootstrap-extension', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '1');
     wp_enqueue_style( 'my-style-admin', get_template_directory_uri() . '/css/admin.css', array(), '1');
@@ -341,7 +342,8 @@ function extraFieldsProductsPrice($post)
     ?>
     <p>
         <span>Цена: </span>
-        <input type="text" name='extra[price]' value="<?php echo get_post_meta($post->ID, "price", 1); ?>">
+        <input id="addPrice" type="text" name='extra[price]' value="<?php echo get_post_meta($post->ID, "price", 1); ?>">
+        (руб.) <small>Только цифры</small>
     </p>
     <?php
 }
@@ -512,3 +514,49 @@ function askQ(){
 }
 
 /*----------------------------------------------— КОНЕЦ Вопросы и ответы —---------------------------------------------------------*/
+
+/*----------------------------------------------— Корзина —---------------------------------------------------------*/
+// AJAX ACTION
+add_action('wp_ajax_add_to_basket', 'add_to_basket');
+add_action('wp_ajax_nopriv_add_to_basket', 'add_to_basket');
+
+function add_to_basket(){
+    if(Cookie::get('basket')){
+        $arr = json_decode(stripslashes(Cookie::get('basket')), true, 4);
+    }
+    else {
+        $arr = [];
+    }
+    $arr[$_POST['post']][] = [
+        'price' => $_POST['price'],
+        'count' => $_POST['count'],
+        'title' => $_POST['title']
+    ];
+    Cookie::set('basket', json_encode($arr));
+    wp_die();
+}
+
+// AJAX ACTION
+add_action('wp_ajax_del_from_basket', 'del_from_basket');
+add_action('wp_ajax_nopriv_del_from_basket', 'del_from_basket');
+
+function del_from_basket(){
+    $arr = json_decode(stripslashes(Cookie::get('basket')), true, 4);
+    unset($arr[$_POST['post']]);
+    Cookie::set('basket', json_encode($arr));
+    wp_die();
+}
+
+function get_basket_price(){
+    $price = 0;
+    if(Cookie::get('basket')){
+        $arr = json_decode(stripslashes(Cookie::get('basket')), true, 4);
+        foreach($arr as $k => $v){
+            foreach($v as $p){
+                $price += $p['count'] * $p['price'];
+            }
+        }
+    }
+    return $price;
+}
+/*----------------------------------------------— КОНЕЦ Корзина —---------------------------------------------------------*/

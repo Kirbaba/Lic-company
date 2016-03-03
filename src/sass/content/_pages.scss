@@ -3,7 +3,13 @@
 	float: left;
 	width: 100%;
 	padding: 50px 0;
-	@include background-image(linear-gradient(top, #333 -25%, rgba(255,255,255,0) 125%));	
+	/* @include background-image(linear-gradient(top, #333 -25%, rgba(255,255,255,0) 125%));	 */
+	background-image: url('../img/gradient-bg.png');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: 50% 0;
 	h3 {
 		display: block;
 		float: left;
@@ -479,6 +485,159 @@ a.goods__item--tobasket--single {
 				border-bottom: 5px solid rgba(51, 51, 51, .36);
 				margin: 10px 0;
 				display: inline-block;
+			}
+		}
+	}
+	&__box {
+		display: block;
+		float: left;
+		position: relative;
+		width: 100%;
+		&--head {
+			margin-left: 194px;
+			width: calc(100% - 169px - 169px - 50px);
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 10px 0;
+			p {
+				display: inline-block;
+				text-align: center;
+				margin: 0;
+				font-size: 16px;
+				color: #333;
+			}
+		}
+		&--thumb {
+			display: inline-block;
+			position: relative;
+			width: 169px;
+			height: 98px;
+			@include border-radius(7px);
+			@include background-clip(padding-box);
+			background-color: rgba(102,102,102,.15);
+			margin-right: 25px;	
+			@include overflow-img;
+			img {			
+				width: auto;
+				height: auto;
+				min-height: 80%;
+				min-width: inherit;
+			}
+		}
+		&--line {
+			display: block;
+			float: left;
+			position: relative;
+			width: 100%;
+			margin-bottom: 15px;
+			&:last-of-type{
+				margin-bottom: 10px;
+			}
+		}
+		&--info {
+			display: inline-block;
+			margin-left: -4px;
+			min-height: 98px;
+			vertical-align: top;
+			width: calc(100% - 169px - 169px - 50px);
+			@include border-radius(7px);
+			@include background-clip(padding-box);
+			background-color: rgba(102,102,102,.15);
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 10px;
+			font-size: 16px;
+			color: #333;
+			&--name {
+				display: inline-block;
+				width: 300px;
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
+				padding: 0 5px;
+			}
+			&--count {
+				display: inline-block;
+				width: 145px;
+				margin-left: -4px;
+				text-align: center;
+				vertical-align: top;
+				margin-top: 10px;
+			}
+			&--price {
+				display: inline-block;
+				width: 145px;
+				margin-left: -4px;
+				text-align: center;
+				vertical-align: top;
+				margin-top: 10px;
+			}
+			&--sum {
+				display: inline-block;
+				width: 145px;
+				margin-left: -4px;
+				text-align: center;
+				vertical-align: top;
+				margin-top: 10px;
+			}
+		}
+		&--total {
+			display: block;
+			float: left;
+			position: relative;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding-left: 827px;
+			p {
+				display: inline-block;
+				font-size: 16px;
+				color: #333;
+				text-align: center;
+				width: 139px;
+				height: 33px;
+				line-height: 33px;
+				@include border-radius(7px);
+				@include background-clip(padding-box);
+				background-color: rgba(102,102,102,.15);
+				vertical-align: top;
+			}
+			&--order {
+				@extend .about__form--btn;
+				width: 283px;
+				height: 27px;
+				line-height: 27px;
+				text-align: center;
+				display: inline-block;
+				padding: 0;
+				font-size: 15px;
+				font-weight: 400;
+				&:hover, &:focus {
+					text-decoration: none;
+					color: #FFF;
+				}		
+			}
+		}
+		&--del-but {
+			display: inline-block;
+			padding: 5px 45px;
+			@include border-radius(7px);
+			@include background-clip(padding-box);
+			background-color: #333;
+			@include box-shadow(0 2px 5px rgba(0,0,0,.22));
+			margin: 20px 15px;
+			vertical-align: bottom;
+			font-size: 15px;
+			color: #FFF;
+			font-weight: 500;
+			position: relative;
+			@include transition(.3s); 
+			&:hover, &:focus {
+				color: #FFF;
+				background-color: darken(#333, 10%);
 			}
 		}
 	}

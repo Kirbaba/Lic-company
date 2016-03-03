@@ -19,7 +19,7 @@
                     <?php foreach($v as $p): ?>
                         <?php $post = get_post($p); ?>
                         <div class="goods__item--line">
-                            <a href="<?= $post->guid ?>"><?= $post->post_title ?></a>
+                            <a href="<?= $post->guid ?>"><span id="title_<?= $post->ID ?>"><?= $post->post_title ?></span></a>
                             <!-- open .goods__item--info--options -->
                             <?php if ( get_post_meta($post->ID, 'size', true) ) : ?>
                             <div class="goods__item--info--options">
@@ -36,13 +36,13 @@
                             <!-- close .goods__item--info--options -->
                             <!-- open .goods__item--price -->
                             <div class="goods__item--price">
-                                <h4><?= get_post_meta($post->ID, 'price', true) ?></h4>
+                                <h4><span id="price_<?= $post->ID ?>"><?= get_post_meta($post->ID, 'price', true) ?></span> р.</h4>
                                 <div class="goods__item--pricebox">
-                                    <p>1 шт.</p>
+                                    <p><span id="count_<?= $post->ID ?>" class="count-prod">1</span> шт.</p>
                                     <!-- open .goods__item--pricebox--controls -->
                                     <div class="goods__item--pricebox--controls">
-                                        <a href="#" class="minus">+</a>
-                                        <a href="#" class="plus">-</a>
+                                        <a href="#" class="plus">+</a>
+                                        <a href="#" class="minus">-</a>
                                     </div>
                                     <!-- close .goods__item--pricebox--controls -->
 
@@ -50,7 +50,7 @@
                             </div>
                             <!-- close .goods__item--price -->
 
-                            <a href="#" class="goods__item--tobasket">добавить в корзину</a>
+                            <a href="#" post_id="<?= $post->ID ?>" class="goods__item--tobasket add_to_basket">добавить в корзину</a>
                         </div>
                     <?php endforeach; ?>
                     <!-- close .goods__item--line -->
