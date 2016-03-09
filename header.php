@@ -21,7 +21,7 @@
 		<!-- close .header__logo -->
 		<!-- open .header__info -->
 		<div class="header__info">
-			<a href="#" class="header__info--enter">Войти</a>
+			<a href="<?= is_user_logged_in() ? '/logout/' : '/enter/' ?>" class="header__info--enter"><?= is_user_logged_in() ? 'Выход' : 'Войти' ?></a>
 			<a href="/basket/" class="header__info--basket">Корзина<br/>Сумма: <span id="basket_price"><?= get_basket_price() ?></span> р. </a>
 			<!-- open .header__info--contacts -->
 			<div class="header__info--contacts">

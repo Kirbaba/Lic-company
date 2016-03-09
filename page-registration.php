@@ -4,7 +4,7 @@
 		<!-- open .basket--head -->
 		<div class="basket--head">
 			<!-- open .block_title -->
-			<h2 class="block_title"><span>Вход</span></h2>
+			<h2 class="block_title"><span>Регистрация</span></h2>
 			<!-- close .block_title -->
 		</div>
 		<!-- open .contain -->

@@ -5,6 +5,7 @@ define('TM_URL', get_template_directory_uri(__FILE__));
 
 use lib\helpers\Cookie;
 use lib\helpers\Debug;
+use lib\helpers\Header;
 use lib\helpers\Mailer;
 use lib\helpers\WP;
 
@@ -560,3 +561,28 @@ function get_basket_price(){
     return $price;
 }
 /*----------------------------------------------— КОНЕЦ Корзина —---------------------------------------------------------*/
+
+
+/*----------------------------------------------— ВХОД —---------------------------------------------------------*/
+// AJAX ACTION
+add_action('wp_ajax_enter', 'my_enter');
+add_action('wp_ajax_nopriv_enter', 'my_enter');
+
+function my_enter(){
+    // Авторизуем
+    $auth = wp_authenticate( $_POST['email'], $_POST['pass'] );
+
+    if ( is_wp_error( $auth ) ) {
+        echo 0;
+    }
+    else {
+        $a = wp_signon( [
+            'user_login'=>$auth->data->user_login,
+            'user_password' => $_POST['pass'],
+            'remember'      => true,
+        ] );
+        echo 1;
+    }
+    wp_die();
+}
+/*----------------------------------------------— КОНЕЦ ВХОД —---------------------------------------------------------*/

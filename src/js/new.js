@@ -71,4 +71,23 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    $('#enter').on('click', function(){
+        var email = $(this).prev().prev().val();
+        var pass = $(this).prev().val();
+        $.ajax({
+            url: myajax.act, //url, к которому обращаемся
+            type: "POST",
+            data: "action=enter&email=" + email + "&pass=" + pass,
+            success: function (data) {
+                if(data == '1'){
+                    location.href = "/";
+                }
+                else {
+                    location.href = "/enter/"
+                }
+            }
+        });
+        return false;
+    });
 });

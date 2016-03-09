@@ -12,8 +12,8 @@
 			<!-- open .enter -->
 			<div class="enter">
 				<input type="text" name="enter--email" class="enter--inp" placeholder="Введите E-mail " />
-				<input type="text" name="enter--password" class="enter--inp" placeholder="Введите пароль "/>
-				<a href="#" class="enter--but">войти</a>
+				<input type="password" name="enter--password" class="enter--inp" placeholder="Введите пароль "/>
+				<a href="#" id="enter" class="enter--but">войти</a>
 			</div>
 			<!-- close .enter -->
 		</div>
