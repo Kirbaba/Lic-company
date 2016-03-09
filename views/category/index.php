@@ -1,5 +1,5 @@
 <!-- open .page-box -->
-<section class="page-box">
+<section class="page-box p-top-50">
     <!-- open .contain -->
     <div class="contain">
         <h3><span>Грязевые препараты и бальнеокосметика</span></h3>
