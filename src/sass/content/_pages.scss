@@ -2,7 +2,7 @@
 	display: block;
 	float: left;
 	width: 100%;
-	padding: 50px 0;
+	padding: 0 0 50px 0;
 	/* @include background-image(linear-gradient(top, #333 -25%, rgba(255,255,255,0) 125%));	 */
 	background-image: url('../img/gradient-bg.png');
 	background-repeat: no-repeat;
@@ -701,4 +701,55 @@ a.goods__item--tobasket--single {
 }
 .order {
 	@extend .enter;
+}
+
+.page-contacts {
+	&--wrap {
+		display: block;
+		float: left;
+		width: 100%;
+		position: relative;
+		padding: 25px 0;
+	}
+	&--box {
+		display: block;
+		float: left;
+		position: relative;
+		width: 75%;
+		margin-bottom: 15px;
+		@include border-radius(7px);
+		@include background-clip(padding-box);
+		background-color: rgba(102,102,102,.15);
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 20px;
+		p {
+			color: #000;
+			font-size: 16px;
+			font-weight: 400;
+			margin: 0 0 25px;
+			b {
+				font-weight: 600;
+			}
+		}
+	}
+	&--table {
+		display: block;
+		float: left;
+		width: 100%;
+		p {
+			margin: 0;
+			span.page-contacts--title {
+				display: inline-block;
+				width: 40%;
+				font-weight: 600;
+			}
+		}
+	}
+	&--leadership {
+		b {
+			display: block;
+		}
+	}
 }

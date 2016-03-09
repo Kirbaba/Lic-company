@@ -153,10 +153,10 @@
 		<div id="map" style="width:100%; height:100%"></div>
 		<!-- open .contacts__info -->
 		<div class="contacts__info">
-			<p><i class="contacts--phone-icon"></i><?= get_theme_mod('phone_textbox') ?></p>
-			<p><i class="contacts--mail-icon"></i><?= get_theme_mod('mail_textbox') ?></p>
-			<p><i class="contacts--point-icon"></i>107150, г.Москва, ул. Ивантеевская, д.9</p>
-			<p><i class="contacts--watch-icon"></i>с пн. - пт., с 10 до 17 часов, без обеда</p>
+			<p><i class="contacts--phone-icon"></i><span><?= get_theme_mod('phone_textbox') ?></span></p>
+			<p><i class="contacts--mail-icon"></i><span><?= get_theme_mod('mail_textbox') ?></span></p>
+			<p><i class="contacts--point-icon"></i><span>107150, г.Москва, ул. Ивантеевская, д.9</span></p>
+			<p><i class="contacts--watch-icon"></i><span>с пн. - пт., с 10 до 17 часов, без обеда</span></p>
 		</div>
 		<!-- close .contacts__info -->
 	</article>
