@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <!-- open .page-box -->
-<section class="page-box">
+<section class="page-box p-top-50">
 	<!-- open .contain -->
 	<div class="contain">
 		<?php if ( has_post_thumbnail() ): ?>

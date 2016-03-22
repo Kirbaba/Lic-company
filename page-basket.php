@@ -66,7 +66,7 @@ get_header(); ?>
 				<div class="basket__box--total">
 					<p>Итого:</p>
 					<p><?= get_basket_price() ?></p>
-					<a href="#" class="basket__box--total--order">оформить заказ</a>
+					<a href="/order/" class="basket__box--total--order">оформить заказ</a>
 				</div>
 				<!-- close .basket__box--total -->
 			</div>

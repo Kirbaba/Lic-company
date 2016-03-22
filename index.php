@@ -1,10 +1,11 @@
 ﻿<?php get_header(); ?>
 <!-- open .initial-screen -->
-<section class="initial-screen">
+<?php $dir = get_bloginfo('template_directory'); ?>
+<section class="initial-screen" style="background-image: url('<?= get_theme_mod('img-upload-1', get_bloginfo('template_directory').'/img/bg.jpg') ?>')">
 	<!-- open .contain -->
 	<div class="contain">
 		<h1><span>ЛЕЧЕБНЫЕ ГРЯЗИ И КОСМЕТИКА НА ИХ ОСНОВЕ</span></h1>
-		<a href="#">открыть каталог</a>
+		<a href="/prod/">открыть каталог</a>
 	</div>
 	<!-- close .contain -->
 </section>
@@ -77,7 +78,7 @@
 <!-- close .about -->
 
 <!-- open .documents -->
-<section class="documents">
+<section class="documents" style="background-image: url('<?= get_theme_mod('img-upload-2', get_bloginfo('template_directory').'/img/bg2.jpg') ?>')">
 	<!-- open .block_title -->
 	<h2 class="block_title"><span>ДОКУМЕНТЫ И СЕРТИФИКАТЫ</span></h2>
 	<!-- close .block_title -->
@@ -113,7 +114,7 @@
 <!-- close .documents -->
 
 <!-- open .writetous -->
-<section class="writetous">
+<section class="writetous" style="background-image: url('<?= get_theme_mod('img-upload-3', get_bloginfo('template_directory').'/img/bg3.png') ?>')">
 	<!-- open .block_title -->
 	<h2 class="block_title">
 		У ВАС ОСТАЛИСЬ ВОПРОСЫ?<br />

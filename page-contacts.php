@@ -29,14 +29,14 @@
 					<p><b>ООО КОМПАНИЯ «ЛИК»</b>, свидетельство ОГРН № 1067760051369 от 23.11.2006 г. </p>
 					<!-- open .page-contacts--table -->
 					<div class="page-contacts--table">
-						<p><span class="page-contacts--title">ИНН/КПП</span>7702625461 / 771801001</p>
-						<p><span class="page-contacts--title">Юридический адрес</span>107150, г. Москва, ул. Ивантеевская, д.9 (посмотреть на карте)</p>
-						<p><span class="page-contacts--title">Фактический адрес </span>107150, г. Москва, ул. Ивантеевская, д.9 (посмотреть на карте)</p>
-						<p><span class="page-contacts--title">Банковские реквизиты:</span>ОАО «Банк Москвы» </p>
-						<p><span class="page-contacts--title">Расчетный счет (рублевый) </span>40702810900910000720</p>
-						<p><span class="page-contacts--title">Кор. счет </span>30101810500000000219</p>
-						<p><span class="page-contacts--title">БИК</span>044525219</p>
-						<p><span class="page-contacts--title">ОКАТО </span>45263552000</p>
+						<p><span class="page-contacts--title">ИНН/КПП</span><?= get_theme_mod('inn_textbox') ?></p>
+						<p><span class="page-contacts--title">Юридический адрес</span><?= get_theme_mod('u_address_textbox') ?></p>
+						<p><span class="page-contacts--title">Фактический адрес </span><?= get_theme_mod('f_address_textbox') ?></p>
+						<p><span class="page-contacts--title">Банковские реквизиты:</span><?= get_theme_mod('bank_textbox') ?></p>
+						<p><span class="page-contacts--title">Расчетный счет (рублевый) </span><?= get_theme_mod('checking_account') ?></p>
+						<p><span class="page-contacts--title">Кор. счет </span><?= get_theme_mod('kor_check') ?></p>
+						<p><span class="page-contacts--title">БИК</span><?= get_theme_mod('bic') ?></p>
+						<p><span class="page-contacts--title">ОКАТО </span><?= get_theme_mod('okato') ?></p>
 					</div>
 					<!-- close .page-contacts--table -->
 

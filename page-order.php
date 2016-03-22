@@ -10,14 +10,18 @@
 		<!-- open .contain -->
 		<div class="contain">	
 			<!-- open .enter -->
-			<div class="order">
-				<input type="text" name="order--name" class="enter--inp" placeholder="ФИО" />
-				<input type="tel" name="order--pgone" class="enter--inp" placeholder="Телефон" />
-				<input type="email" name="order--mail" class="enter--inp" placeholder="E-mail " />
-				<input type="text" name="order--adress" class="enter--inp" placeholder="Адрес доставки " />
-				
-				<a href="#" class="enter--but">оплатить</a>
-			</div>
+			<form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" id="orderForm">
+				<div class="order">
+					<input type="text" name="name" class="enter--inp" placeholder="ФИО" />
+					<input type="tel" name="phone" class="enter--inp" placeholder="Телефон" />
+					<input type="email" name="email" class="enter--inp" placeholder="E-mail " />
+					<input type="text" name="address" class="enter--inp" placeholder="Адрес доставки " />
+					<input type="hidden" name="sum" value="<?= get_basket_price() ?>">
+					<input type="hidden" name="action" value="order_pay">
+					<input type="hidden" name="test" value="1">
+					<a href="#" onclick="$('#orderForm').submit();return false" class="enter--but">оплатить</a>
+				</div>
+			</form>
 			<!-- close .enter -->
 		</div>
 		<!-- close .contain -->

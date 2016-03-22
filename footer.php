@@ -12,7 +12,7 @@
 		<!-- open .footer--links -->
 		<div class="footer--links">
 			<a href="#">Политика конфиденциальности  </a>
-			<a href="#">Реквизиты</a>
+			<a href="/contacts/">Реквизиты</a>
 			<p>Разработанно маркетологами Expert Convertion</p>
 		</div>
 		<!-- close .footer--links -->

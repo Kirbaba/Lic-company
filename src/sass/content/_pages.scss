@@ -753,3 +753,33 @@ a.goods__item--tobasket--single {
 		}
 	}
 }
+
+.enter-reg-link {
+	display: inline-block;
+	width: 100%;
+	font-size: 12px;
+	margin: 0;
+	color: #333;
+	@include transition(.3s);
+	text-transform: lowercase;
+	&:hover, &:focus {
+		color: #333;
+		text-decoration: underline;
+	}
+}
+
+.hren_images {
+	display: flex;
+	width: 100%;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: baseline;
+	align-items: baseline;
+	margin-top: 50px;
+	img {
+		height: 250px;
+	}
+}

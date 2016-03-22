@@ -2,7 +2,7 @@
 <section class="page-box p-top-50">
     <!-- open .contain -->
     <div class="contain">
-        <h3><span>Грязевые препараты и бальнеокосметика</span></h3>
+        <h3><span><?= $catName ?></span></h3>
 
         <?php foreach($arr as $k => $v): ?>
             <article class="goods__item">

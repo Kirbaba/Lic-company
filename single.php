@@ -1,19 +1,44 @@
 <?php get_header(); ?>
-
-    <div class="questions">
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <!-- open .page-box -->
+    <section class="page-box p-top-50">
+        <!-- open .contain -->
         <div class="contain">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <div class="questions__answer" style="width: 100%">
-                    <!-- open .questions__answer--quest-text -->
-                    <div class="questions__answer--quest-text">
-                        <p><i><?php the_title(); ?></i></p>
-                    </div>
-                    <p><i><?php the_content(); ?></i></p>
-                    <!-- close .questions__answer--quest-text -->
+            <?php if ( has_post_thumbnail() ): ?>
+                <!-- open .single__thumb -->
+                <div class="single__thumb">
+                    <?php the_post_thumbnail(); ?>
                 </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
+                <!-- close .single__thumb -->
+            <?php endif;?>
+            <!-- open .single__desc -->
+            <div class="single__desc">
+                <h3><?php the_title(); ?></h3>
+                <!-- open .single__desc--info -->
+                <div class="single__desc--info">
+                    <?php the_content(); ?>
+                </div>
+                <!-- close .single__desc--info -->
+            </div>
+            <!-- close .single__desc -->
+            <div class="hren_images">
+                <a download href="<?php bloginfo('template_directory'); ?>/img/s1.png">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/s1.png" alt="">
+                </a>
+                <a download href="<?php bloginfo('template_directory'); ?>/img/s2.png">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/s2.png" alt="">
+                </a>
+                <a download href="<?php bloginfo('template_directory'); ?>/img/s3.png">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/s3.png" alt="">
+                </a>
+                <a download href="<?php bloginfo('template_directory'); ?>/img/s4.png">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/s4.png" alt="">
+                </a>
+            </div>
         </div>
-    </div>
-
+        <!-- close .contain -->
+    </section>
+    <!-- close .page-box -->
+<?php endwhile; ?>
+<?php endif;?>
 <?php get_footer(); ?>
